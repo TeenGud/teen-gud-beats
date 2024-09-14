@@ -1,6 +1,7 @@
 'use client'
 
 import { Container, Header } from "@/shared/components/shared"
+import { Suspense } from "react"
 
   
   export default function CheckoutLayout({
@@ -10,7 +11,9 @@ import { Container, Header } from "@/shared/components/shared"
   }) {
     return (
       <main className="min-h-screen">
-        <Header hasCart={false} hasSearch={false} className="border-slate-900"/>
+        <Suspense>
+          <Header hasCart={false} hasSearch={false} className="border-slate-900"/>
+        </Suspense>
         <Container>
             {children}
         </Container>

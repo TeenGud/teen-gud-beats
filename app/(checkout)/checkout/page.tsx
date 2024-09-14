@@ -10,7 +10,7 @@ import { cn } from "@/shared/lib/utils";
 import { Api } from "@/shared/services/api-client";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useSession } from "next-auth/react";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
@@ -59,6 +59,7 @@ export default function CheckoutPage() {
         }
     }
     return (
+        <Suspense>
         <Container className="mt-8">
             <Title className="text-purple-300 font-extrabold mb-5" size="lg" text="Making an order" />
 
@@ -76,5 +77,6 @@ export default function CheckoutPage() {
                 </form>
             </FormProvider>
         </Container>
+        </Suspense>
     )
 }
