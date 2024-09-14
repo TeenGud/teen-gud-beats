@@ -1,0 +1,1 @@
+import { EmailTemplate } from './email-template'
