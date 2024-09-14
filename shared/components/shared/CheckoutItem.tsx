@@ -1,3 +1,4 @@
+'use client'
 import { cn } from "@/shared/lib/utils";
 import { CartItemProps } from "./cart-item-details/cart-item-details.types";
 import { CartItemDetailsImage } from "./cart-item-details/cart-item-details-image";
